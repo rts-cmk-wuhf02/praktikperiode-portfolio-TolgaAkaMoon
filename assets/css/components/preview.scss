@@ -1,0 +1,30 @@
+/* Section Preview */
+.preview {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.preview__sectionPrev {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.sectionPrev__title {
+    font-size: 30px;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: 200;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+@media only screen and (min-width: 768px) {
+    
+    .section__background {
+        margin: 0;
+        padding: 0;
+    }
+    
+}

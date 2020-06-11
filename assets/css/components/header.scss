@@ -1,0 +1,146 @@
+.header {
+    width: 100vw;
+    position: absolute;
+}
+
+.header__nav {
+    position: sticky;
+}
+
+.header__triangle {
+    width: 100vw;
+    height: 50px;
+    position: absolute;
+    filter: blur(25px);
+    top: -20px;
+    background-color: #1f7179;
+}
+
+nav {
+    display: grid;
+    background-color: none;
+    color: black;
+    background-color: black;
+    -webkit-box-shadow: 0px 0px 60px -1px rgba(0,0,0,0.82);
+    -moz-box-shadow: 0px 0px 60px -1px rgba(0,0,0,0.82);
+    box-shadow: 0px 0px 60px -1px rgba(0,0,0,0.82);
+    width: 100%;
+    grid-template-columns: 1fr 0.2fr;
+    grid-auto-rows: auto;
+    align-items: center;
+    height: 50px;
+}
+
+nav ul {
+	display: none;
+	position: relative;
+	grid-template-rows: repeat(4, 1fr);
+	height: 300px;
+	width: 100%;
+	background-color: #707070;
+	grid-column-start: 1;
+	grid-column-end: 3;
+	list-style-type: none;
+	margin: 0;
+    padding: 0;
+    margin-top: 8px;
+	align-items: center;
+    text-align: center;
+    text-decoration: none;
+}
+
+ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-family: "Verdana";
+}
+
+#checkbox {
+    position: relative;
+    display: none;
+}
+
+#checkbox:checked + #uList {
+    display: grid;
+}
+
+#checkboxLabel {
+    content: url(../images/bmenu.svg);
+    fill: white;
+    position: relative;
+    display: inline-block;
+    grid-column: 2;
+    height: 42px;
+    width: 42px;
+    background-size: cover;
+    border: none;
+}
+
+@media only screen and (min-width: 768px) {
+
+    #checkboxLabel {
+        display: none;
+        content: none;
+    }
+
+    #checkbox {
+        display: none;
+        content: none;
+    }
+
+    .header {
+        width: 100vw;
+        position: absolute;
+    }
+
+    .header__nav {
+        position: sticky;
+    }
+
+    #uList {
+        display: block;
+        height: 50px;
+        width: 100%;
+        grid-template-rows: 0;
+        background-color: transparent;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav {
+        display: grid;
+        color: black;
+        background-color: black;
+        -webkit-box-shadow: 0px 0px 60px -1px rgba(0,0,0,0.82);
+        -moz-box-shadow: 0px 0px 60px -1px rgba(0,0,0,0.82);
+        box-shadow: 0px 0px 60px -1px rgba(0,0,0,0.82);
+        width: 100%;
+        grid-template-columns: 44% 56%;
+        align-items: center;
+        height: 56px;
+        margin: 0;
+    }
+
+    nav ul li {
+        margin-right: 20px;
+        margin-top: 15px;
+        padding: 0;
+        float: right;
+        font-size: 20px;
+        text-decoration: none;
+    }
+
+    
+    nav h1 {
+        margin-left: 22%;
+    }
+    
+    #uList {
+        width: 83%;
+    }
+
+}

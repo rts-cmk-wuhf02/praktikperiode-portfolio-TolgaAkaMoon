@@ -3,8 +3,8 @@ const ejs = require("gulp-ejs");
 const rename = require("gulp-rename");
 const connect = require("gulp-connect");
 const sass = require("gulp-sass");
-const postcss = require('gulp-postcss');    
-const imagemin = require('gulp-imagemin');
+const babel = require("gulp-babel");
+const imagemin = require("gulp-imagemin");
 
 sass.compiler = require('node-sass');
 
@@ -40,33 +40,33 @@ function watchScss(done) {
 }
 
 function js(done){
-    gulp.src('./assets/js/**/*.js')
+    gulp.src('./assets/js/*.js')
     .pipe(gulp.dest('./dist/assets/javascript'))
     .pipe(connect.reload());
     done();
 }
 
 function watchJs(done) {
-    gulp.watch('./assets/js/**/*.js', { ignoreInitial: false }, js);
+    gulp.watch('./assets/js/*.js', { ignoreInitial: false }, js);
 }
 
 function images(done) {
-    gulp.src('./src/images/*')
-        .pipe(imagemin())
-        .pipe(gulp.dest('./dist/assets/images'))
-        .pipe(connect.reload());
-    done();
+	gulp.src("./assets/images/*")
+		.pipe(imagemin())
+		.pipe(gulp.dest("./dist/assets/images"))
+		.pipe(connect.reload());
+	done();
 }
 
-function WatchImages(done) {
-    gulp.watch('./src/images/*', { ignoreInitial: false }, images);
+function watchImages(done) {
+	gulp.watch("./assets/images/*", { ignoreInitial: false}, images);
 }
 
 gulp.task('dev', function(done){
     watchHtml();
     watchScss();
     watchJs();
-    WatchImages();
+    watchImages();
     connect.server({
         livereload: true,
         root: "dist"

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="42" height="42"
+viewBox="0 0 42 42"><defs><clipPath id="a"><rect width="42" height="42" fill="none"/>
+</clipPath></defs><g clip-path="url(#a)"><g fill="none" stroke="#fefefe" stroke-width="2">
+<rect width="42" height="42" rx="7" stroke="none"/>
+</g><line x2="26.755" transform="translate(7.5 12.5)" fill="none" stroke="#fefefe" stroke-width="3"/>
+<line x2="26.755" transform="translate(7.5 21.5)" fill="none" stroke="#fefefe" stroke-width="3"/>
+<line x2="26.755"
+transform="translate(7.5 30.5)" fill="none"
+stroke="#fefefe" stroke-width="3"/></g></svg>
