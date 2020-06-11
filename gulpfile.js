@@ -9,7 +9,7 @@ const imagemin = require('gulp-imagemin');
 sass.compiler = require('node-sass');
 
 function html(done) {
-    gulp.src('./src/html/templates/*.ejs')
+    gulp.src('./assets/html/templates/*.ejs')
         .pipe(ejs())
         .pipe(rename(function(path){
             if(path.basename != "index") {
@@ -24,33 +24,30 @@ function html(done) {
 }
 
 function watchHtml(done) {
-    gulp.watch("./src/html/**/*.ejs", { ignoreInitial: false }, html);
+    gulp.watch("./assets/html/**/*.ejs", { ignoreInitial: false }, html);
 }
 
 function scss(done) {
-    gulp.src('./src/css/**/*.scss')
+    gulp.src('./assets/css/**/*.scss')
         .pipe(sass())
-        .pipe(postcss([
-            require('tailwindcss')
-        ]))
         .pipe(gulp.dest('./dist/assets/css'))
         .pipe(connect.reload());
     done();
 }
 
 function watchScss(done) {
-    gulp.watch('./src/css/**/*.scss', { ignoreInitial: false }, scss);
+    gulp.watch('./assets/css/**/*.scss', { ignoreInitial: false }, scss);
 }
 
 function js(done){
-    gulp.src('./src/javascript/**/*.js')
+    gulp.src('./assets/js/**/*.js')
     .pipe(gulp.dest('./dist/assets/javascript'))
     .pipe(connect.reload());
     done();
 }
 
 function watchJs(done) {
-    gulp.watch('./src/javascript/**/*.js', { ignoreInitial: false }, js);
+    gulp.watch('./assets/js/**/*.js', { ignoreInitial: false }, js);
 }
 
 function images(done) {
