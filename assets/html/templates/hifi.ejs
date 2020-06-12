@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>HI FI | HOME</title>
+</head>
+<body>
+    <style>
+        .main__banner {
+    background: url(../img2/banner-speaker.jpg) center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 220px;
+    width: 100%;
+    margin-top: 180px;
+    margin-bottom: -20px;
+}
+
+.banner__heading {
+    color: white;
+    font-size: 40px;
+    width: 1000px;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 75px;
+}
+
+.homeFooter {
+    margin-top: -20px;
+    width: 100%;
+    height: 90px;
+    color: white;
+    background-color: #a39161;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.homeFooter__container {
+    display: flex;
+    align-items: center;
+}
+
+.container__registeredTitle {
+    display: flex;
+    flex-direction: column;
+    font-size: 8px;
+    color: black;
+    font-weight: bold;
+    margin-left: 30px;
+    width: 190px;
+}
+
+.registeredTitle__Number {
+    color: black;
+}
+
+.registeredTitle__Subtitle {
+    color: black;
+}
+
+.container__links {
+    font-size: 11px;
+    color: white;
+    margin-top: 0;
+    margin-left: 50px;
+    font-weight: lighter;
+}
+
+.links__refundAnker {
+    color: white;
+    margin-right: 5px;
+}
+
+.links__privacyAnker {
+    color: white;
+    margin-left: 5px;
+}
+
+.homeFooter__socialsContainer {
+    display: flex;
+    align-items: center;
+}
+
+.socialsContainer__payBrands {
+    height: 60px;
+}
+
+.socialsContainer__socials {
+    width: 100px;
+}
+
+.main__gallery {
+    height: 400px;
+    display: grid;
+    width: 100%;
+    margin-left: 0;
+    grid-template-columns: 1fr 1fr 1fr;
+    -webkit-transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+
+.gallery__boxLeft {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    width: 100%;
+    min-width: 410px;
+    height: auto;
+    min-height: 300px;
+    vertical-align: middle;
+    background: url(../img2/social-1.jpg);
+    background-size: cover;
+}
+
+.gallery__boxMid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    width: 100%;
+    min-width: 410px;
+    height: auto;
+    min-height: 300px;
+    vertical-align: middle;
+    background: url(../img2/social-2.jpg);
+    background-size: cover;
+}
+
+.gallery__boxRight {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    width: 100%;
+    min-width: 410px;
+    height: auto;
+    min-height: 300px;
+    vertical-align: middle;
+    background: url(../img2/social-3.jpg);
+    background-size: cover;
+}
+
+.box__img {
+    height: 150px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    height: 60px;
+    background: rgba(0, 0, 0, 0.7);
+    border-bottom: 1px solid #413a27;
+}
+
+.header__box {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+.box__contact {
+    cursor: pointer;
+    height: 20px;
+    margin-right: 15px;
+    margin-top: 10px;
+}
+
+.box__button{
+    cursor: pointer;
+    margin-right: 15px;
+    background-color: #1798f1;
+    outline: none;
+    border: solid black 1px;
+    border-radius: 3px;
+    color: white;
+    margin-top: 9px;
+}
+
+.navigation {
+    width: 100%;
+    height: 40px;
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+    font-size: 0.8em;
+}
+
+.navigation__unorderedlist {
+    display: flex;
+    text-decoration: none;
+}
+
+.unorderedlist__link {
+    margin-right: 2em;
+    text-decoration: none;
+}
+
+.link__anker {
+    text-decoration: none;
+    color: white;
+}
+
+.info {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    color: white;
+    background-color: #111111;
+}
+
+.info__container {
+    width: 284px;
+    text-align: center;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.container__title {
+    text-transform: uppercase;
+    border: 1px solid white;
+    width: 120px;
+    height: 30px;
+    padding-top: 5px;
+    margin: 0 auto;
+    margin-top: 100px;
+    color: #a39161;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.container__subtitle {
+    color: white;
+}
+
+.main__logoContainer {
+    width: 110px;
+    height: 120px;
+    border: 2px white solid;
+    margin: 0 auto;
+    color: white;
+    margin-top: 150px;
+}
+
+.logoContainer__title {
+    margin-top: 55px;
+    letter-spacing: 5px;
+    width: 60px;
+    text-align: center;
+    font-size: 25px;
+}
+
+.logoContainer__subtitle {
+    margin-top: 0px;
+    position: absolute;
+}
+
+.main__slideshow {
+    background-color: white;
+    height: 650px;
+    width: 100%;
+    margin-top: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0;
+}
+
+.slideshow__slide {
+    width: 500px;
+    margin: auto auto;
+}
+
+.slideshow__title {
+    width: 200px;
+    color: #a09167;
+    font-size: 27px;
+    font-weight: lighter;
+    padding-top: 80px;
+    margin-left: 100px;
+    grid-column: 1;
+}
+
+.slide__prima {
+    grid-column: 2;
+    margin: 0 auto;
+    height: 200px;
+}
+
+.arrows__arrowLeft {
+    height: 80px;
+    left: 25px;
+    color: #c0ab9f;
+    margin-top: 290px;
+    margin-left: 60px;
+    cursor: pointer;
+}
+
+.arrows__arrowRight {
+    cursor: pointer;
+    height: 80px;
+    right: 25px;
+    color: #c0ab9f;
+    grid-column: 3;
+    position: absolute;
+    margin-top: 290px;
+    margin-right: 60px;
+}
+
+    </style>
+    <header class="header">
+        <div class="header__box">
+            <button class="box__button">&#9993; | Subscribe</button>
+            <img class="box__contact" src="assets/img2/top-mail.png">
+            <img class="box__contact" src="assets/img2/top-call.png">
+            <img class="box__contact" src="assets/img2/top-map.png">
+        </div>
+    </header>
+    <navbar class="navigation">
+        <ul class="navigation__unorderedlist">
+            <li class="unorderedlist__link"><a href="index.html" class="link__anker">HOME</a></li>
+            <li class="unorderedlist__link"><a href="home" class="link__anker">ABOUT US</a></li>
+            <li class="unorderedlist__link"><a href="home" class="link__anker">BRANDS</a></li>
+            <li class="unorderedlist__link"><a href="home" class="link__anker">BLOG</a></li>
+            <li class="unorderedlist__link"><a href="home" class="link__anker">EVENTS</a></li>
+            <li class="unorderedlist__link"><a href="shopgallery.html" class="link__anker">SHOP</a></li>
+            <li class="unorderedlist__link"><a href="home" class="link__anker">CONTACT US</a></li>
+        </ul>
+    </navbar>
+    <main class="main">
+        <div class="main__logoContainer">
+            <h1 class="logoContainer__title">HI FI</h1>
+            <p class="logoContainer__subtitle">hificorner.co.uk</p>
+        </div>
+        <section class="main__banner">
+            <h1 class="banner__heading">OUR EDINBURGH SHOWROOM HAS NOW MOVED TO STUNNING NEW PREMISES ON JOPPA ROAD</h1>
+        </section>
+        <section class="main__slideshow">
+            <!-- Inner HTML From JavaScript -->
+            <img class="arrows__arrowLeft" src="./assets/img2/slider-prev.png">
+            <img class="arrows__arrowRight" src="./assets/img2/slider-next.png">
+        </section>
+        <section class="main__gallery">
+            <figure class="gallery__boxLeft">
+                <img class="box__img" src="./assets/img2/social-facebook.png">
+            </figure>
+            <figure class="gallery__boxMid">
+                <img class="box__img" src="./assets/img2/social-blog.png">
+            </figure>
+            <figure class="gallery__boxRight">
+                <img class="box__img" src="./assets/img2/social-twitter.png">
+            </figure>
+        </section>
+        <section class="info">
+            <article class="info__container">
+                <div class="container__title">History</div>
+                <p class="container__subtitle">ESTABLISHED IN THE LATE 1960S, OUR FAMILY OWNED BUSINESS
+                    IS BASED IN EDINBURGH AND FALKIRK, SERVICING CUSTOMERS
+                ACROSS THE UK.</p>
+            </article>
+            <article class="info__container">
+                <div class="container__title">News</div>
+                <p class="container__subtitle">CHECK OUT OUR LATEST NEWS STORIES FOR ALL THE UP TO DATE
+                     HI-FI CORNER PRODUCTS AND LAUNCHES.</p>
+            </article>
+            <article class="info__container">
+                <div class="container__title">Shop</div>
+                <p class="container__subtitle">HAVE A LOOK IN OUR ONLINE SHOP FOR GREAT PRODUCTS AND DEALS.</p>
+            </article>
+        </section>
+    </main>
+
+
+    <footer class="homeFooter">
+        <div class="homeFooter__container">
+            <p class="container__registeredTitle">Hi Fi Corner (Edinburgh) Ltd is registered in Scotland
+                <span class="registeredTitle__Number">No: SC049298</span>
+                <span class="registeredTitle__Subtitle">Registered office: 2 Joppa Rd, Edinburgh EH15 2EU</span></p>
+            <h6 class="container__links"><a class="links__refundAnker" href="">Returns & Refunds</a> | <a class="links__privacyAnker" href="">Privacy Policy.</a></h6>
+        </div>
+        <div class="homeFooter__socialsContainer">
+            <img class="socialsContainer__payBrands" src="./assets/img2/pay_logos.png">
+            <figure class="socialsContainer__socials">
+                <img class="" src="./assets/img2/footer-facebook.png">
+                <img class="" src="./assets/img2/footer-youtube.png">
+                <img class="" src="./assets/img2/footer-twitter.png">
+                <img class="" src="./assets/img2/footer-linkedin.png">
+            </figure>
+        </div>
+    </footer>
+    <script>
+    </script>
+</body>
+</html>
