@@ -1,0 +1,74 @@
+.sidenav {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+  }
+  
+  /* Style the sidenav links and the dropdown button */
+  .sidenav a, .dropdown-btn {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    color: white;
+    display: block;
+    flex-direction: column;
+    border: none;
+    background: none;
+    width: 200px;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+    background-color: black;
+    font-size: 18px;
+  }
+  
+  /* On mouse-over */
+  .sidenav a:hover, .dropdown-btn:hover {
+    color: white;
+  }
+
+  .jamstack__div {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      margin-left: 1%;
+  }
+  
+  /* Main content */
+  .jamstack__main {
+    font-size: 20px; /* Increased text to enable scrolling */
+  }
+  
+  /* Add an active class to the active dropdown button */
+  .active {
+    background-color: darkslategrey;
+    color: white;
+  }
+  
+  /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+  .dropdown-container {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #262626;
+    width: 200px;
+    height: 100px;
+  }
+  
+ .dropdown-container a {
+     color: white;
+     margin-top: 5px;
+ } 
+
+  /* Optional: Style the caret down icon */
+  .fa-caret-down {
+    float: right;
+    padding-right: 8px;
+  }
