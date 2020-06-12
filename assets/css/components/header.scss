@@ -5,11 +5,12 @@
 }
 
 .header__portfolio{
+    transition: all 0.2s ease-in-out;
     position: absolute;
     color: white;
     z-index: 1;
     font-family: 'Roboto Condensed', sans-serif;
-    margin-left: 50px;
+    margin-left: 6%;
     margin-top: 15px;
     font-size: 1.3rem;
     letter-spacing: 1.5px;
@@ -18,15 +19,6 @@
 
 .header__nav {
     position: sticky;
-}
-
-.header__triangle {
-    width: 100vw;
-    height: 50px;
-    position: absolute;
-    filter: blur(25px);
-    top: -20px;
-    background-color: #1f7179;
 }
 
 nav {
@@ -52,7 +44,8 @@ nav ul {
 	width: 100%;
 	background-color: #707070;
 	grid-column-start: 1;
-	grid-column-end: 3;
+    grid-column-end: 3;
+    transition: all 0.1s ease-in-out;
 	list-style-type: none;
 	margin: 0;
     padding: 0;
@@ -62,10 +55,12 @@ nav ul {
 }
 
 ul li a {
+    transition: all 0.1s ease-in-out;
     text-decoration: none;
     color: white;
-    font-size: 20px;
+    font-size: 1.2rem;
     font-family: "Verdana";
+    cursor: pointer;
 }
 
 #checkbox {
@@ -74,6 +69,7 @@ ul li a {
 }
 
 #checkbox:checked + #uList {
+    transition: all 0.1s ease-in-out;
     display: grid;
 }
 
@@ -90,6 +86,15 @@ ul li a {
 }
 
 @media only screen and (min-width: 768px) {
+
+    ul li a {
+        font-size: 1rem;
+    }
+
+    .header__portfolio{
+        margin-top: 17px;
+        margin-left: 40px;
+    }
 
     #checkboxLabel {
         display: none;
@@ -142,7 +147,6 @@ ul li a {
         margin-top: 15px;
         padding: 0;
         float: right;
-        font-size: 20px;
         text-decoration: none;
     }
 
@@ -153,7 +157,6 @@ ul li a {
     
     #uList {
         width: 100%;
-
     }
 
 }
