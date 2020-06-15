@@ -30,3 +30,5 @@ for (i = 0; i < dropdown.length; i++) {
     }
   });
 }
+
+let dropdwn = document.querySelector(".dropdown-container");
