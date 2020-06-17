@@ -35,9 +35,9 @@ nav {
 
 nav ul {
 	display: none;
-	position: relative;
+    position: relative;
 	grid-template-rows: repeat(4, 1fr);
-	height: 100vh;
+	height: 300px;
 	width: 100%;
 	background-color: #0f1014;
 	grid-column-start: 1;
