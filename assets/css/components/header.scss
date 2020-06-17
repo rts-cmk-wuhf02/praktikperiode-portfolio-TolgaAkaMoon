@@ -24,11 +24,8 @@
 nav {
     display: grid;
     background-color: none;
-    color: black;
-    background-color: black;
-    -webkit-box-shadow: 0px 0px 60px -1px rgba(0,0,0,0.82);
-    -moz-box-shadow: 0px 0px 60px -1px rgba(0,0,0,0.82);
-    box-shadow: 0px 0px 60px -1px rgba(0,0,0,0.82);
+    color: white;
+    background-color: #0f1014;
     width: 100%;
     grid-template-columns: 1fr 0.2fr;
     grid-auto-rows: auto;
@@ -42,7 +39,7 @@ nav ul {
 	grid-template-rows: repeat(4, 1fr);
 	height: 300px;
 	width: 100%;
-	background-color: #707070;
+	background-color: #0f1014;
 	grid-column-start: 1;
     grid-column-end: 3;
     transition: all 0.1s ease-in-out;
@@ -71,6 +68,11 @@ ul li a {
 #checkbox:checked + #uList {
     transition: all 0.1s ease-in-out;
     display: grid;
+    @keyframes rightToLeft {
+        from {transform: translateX(100vw)}
+        to {transform: translateX(0vw)}
+    }
+    animation: rightToLeft 0.7s ease;
 }
 
 #checkboxLabel {
@@ -130,11 +132,6 @@ ul li a {
 
     nav {
         display: grid;
-        color: black;
-        background-color: black;
-        -webkit-box-shadow: 0px 0px 60px -1px rgba(0,0,0,0.82);
-        -moz-box-shadow: 0px 0px 60px -1px rgba(0,0,0,0.82);
-        box-shadow: 0px 0px 60px -1px rgba(0,0,0,0.82);
         width: 100%;
         grid-template-columns: 44% 56%;
         align-items: center;

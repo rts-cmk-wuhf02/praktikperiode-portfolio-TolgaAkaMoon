@@ -1,6 +1,6 @@
 .sectionPrev__card {
     text-align: center;
-    font-family: arial;
+    font-family: 'Roboto Condensed', sans-serif;
     position: absolute;
     top: 50%;
     max-height: 300px;
@@ -15,7 +15,7 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     background-color: white;
     text-align: center;
-    font-family: arial;
+    font-family: 'Roboto Condensed', sans-serif;
     width: 75vw;
     padding: 5px;
     margin: 0 auto;
@@ -24,15 +24,20 @@
   .card.title {
     color: grey;
     font-size: 18px;
+    font-family: 'Roboto Condensed', sans-serif;
   }
   
-  button {
+  .card__button {
+    font-family: 'Roboto Condensed', sans-serif;
     border: none;
     outline: 0;
     display: inline-block;
     padding: 8px;
-    color: white;
-    background-color: #000;
+    color: black;
+    background-color: white;
+    border: 2px solid #0f1014;
+    text-transform: uppercase;
+    letter-spacing: 2px;
     text-align: center;
     cursor: pointer;
     width: 90%;

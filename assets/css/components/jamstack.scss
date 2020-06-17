@@ -5,7 +5,7 @@
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #111;
+    background-color: #0f1014;
     overflow-x: hidden;
   }
   
@@ -23,9 +23,11 @@
     width: 100%;
     cursor: pointer;
     outline: none;
-    background-color: black;
     text-align: center;
     font-size: 1.3rem;
+    background-color: none;
+    border: 1px solid white;
+    letter-spacing: 2px;
   }
   
   /* On mouse-over */
@@ -49,7 +51,6 @@
   
   /* Add an active class to the active dropdown button */
   .activeJob {
-    background-color: darkslategrey;
     color: white;
   }
   
@@ -81,7 +82,8 @@
     text-align: center;
     width: 80%;
     max-width: 600px;
-    font-family: 'Roboto Condensed', sans-serif
+    font-family: 'Roboto Condensed', sans-serif;
+    color: white;
   }
 
   // new
@@ -90,6 +92,11 @@
     font-size: 1em;
     width: 100%;
     text-transform: uppercase;
+    background-color: #0f1014;
+    border: 1px solid white;
+    color: white;
+    min-height: 40px;
+    letter-spacing: 4px;
   }
 
   .Work__button {
@@ -97,6 +104,11 @@
     text-transform: uppercase;
     width: 100%;
     font-size: 1em;
+    background-color: #0f1014;
+    border: 1px solid white;
+    color: white;
+    min-height: 40px;
+    letter-spacing: 4px;
   }
 
   .About__button {
@@ -104,5 +116,10 @@
     text-transform: uppercase;
     width: 100%;
     font-size: 1em;
+    background-color: #0f1014;
+    min-height: 40px;
+    color: white;
+    border: 1px solid white;
+    letter-spacing: 4px;
   }
   
