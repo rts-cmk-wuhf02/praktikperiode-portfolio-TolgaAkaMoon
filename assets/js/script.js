@@ -2,6 +2,9 @@ let mainNav = document.getElementById('uList');
 let navBarToggle = document.querySelector("#checkboxLabel");
 let checbox = document.querySelector("#checkbox");
 
+let jamstackDesc = document.querySelector(".main__jamDesc");
+
+
 
 // Checkbox unchecked when site width is over 767px
   var mq = window.matchMedia( "(max-width: 767px)" );
