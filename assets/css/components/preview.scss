@@ -1,6 +1,8 @@
 /* Section Preview */
 .preview {
     width: 100%;
+    height: 40vh;
+    position: relative;
 }
 
 .preview__sectionPrev {
@@ -19,6 +21,16 @@
 }
 
 @media only screen and (min-width: 768px) {
-    
-    
+
+    .preview {
+        height: 45vh;
+    }
+
+}
+
+@media only screen and (max-height: 670px) {
+    .preview {
+        height: 100vh;
+    }
+
 }

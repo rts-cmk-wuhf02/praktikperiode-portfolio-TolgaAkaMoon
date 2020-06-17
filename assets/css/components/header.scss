@@ -100,7 +100,7 @@ ul li a {
     }
 
     .header__portfolio{
-        margin-top: 17px;
+        margin-top: 13px;
         margin-left: 40px;
     }
 
@@ -135,6 +135,8 @@ ul li a {
         list-style-type: none;
         margin: 0;
         padding: 0;
+        align-items: center;
+        align-content: center;
     }
 
     nav {
@@ -142,13 +144,12 @@ ul li a {
         width: 100%;
         grid-template-columns: 44% 56%;
         align-items: center;
-        height: 56px;
+        height: 50px;
         margin: 0;
     }
 
     nav ul li {
         margin-right: 20px;
-        margin-top: 15px;
         padding: 0;
         float: right;
         text-decoration: none;
