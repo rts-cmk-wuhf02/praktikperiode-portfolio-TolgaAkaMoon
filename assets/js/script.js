@@ -28,6 +28,8 @@ for (i = 0; i < dropdown.length; i++) {
     var dropdownContent = this.nextElementSibling;
     if (dropdownContent.style.display === "flex") {
       dropdownContent.style.display = "none";
+      dropdownContent.style.background.color = "#0f1014";
+      dropdownContent.style.color = "white";
     } else {
       dropdownContent.style.display = "flex";
     }

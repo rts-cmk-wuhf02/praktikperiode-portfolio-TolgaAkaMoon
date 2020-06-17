@@ -124,7 +124,8 @@ ul li a {
     }
 
     #uList {
-        display: block;
+        display: flex;
+        justify-content: end;
         height: 50px;
         width: 100%;
         grid-template-rows: 0;
@@ -156,10 +157,6 @@ ul li a {
     
     nav h1 {
         margin-left: 22%;
-    }
-    
-    #uList {
-        width: 100%;
     }
 
 }
