@@ -65,6 +65,11 @@ ul li a {
     display: none;
 }
 
+@keyframes leftToRight {
+    from {transform: translateX(0vw)}
+    to {transform: translateX(100vw)}
+}
+
 #checkbox:checked + #uList {
     transition: all 0.1s ease-in-out;
     display: grid;

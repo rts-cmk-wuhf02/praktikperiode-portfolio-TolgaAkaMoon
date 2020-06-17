@@ -27,12 +27,14 @@
     font-size: 1.3rem;
     background-color: none;
     border: 1px solid white;
-    letter-spacing: 2px;
+    letter-spacing: 4px;
+    transition: all 0.1s ease-in-out;
   }
   
   /* On mouse-over */
   .sidenav a:hover, .dropdown-btn:hover {
-    color: white;
+    color: black;
+    background-color: white;
   }
 
   .jamstack__div {
@@ -97,6 +99,14 @@
     color: white;
     min-height: 40px;
     letter-spacing: 4px;
+    transition: all 0.1s ease-in-out;
+  }
+
+  .Frame__button:hover {
+    background-color: white;
+    border: none;
+    color: black;
+    cursor: pointer;
   }
 
   .Work__button {
@@ -109,7 +119,16 @@
     color: white;
     min-height: 40px;
     letter-spacing: 4px;
+    transition: all 0.1s ease-in-out;
   }
+
+  .Work__button:hover {
+    background-color: white;
+    border: none;
+    color: black;
+    cursor: pointer;
+  }
+
 
   .About__button {
     font-family: 'Roboto Condensed', sans-serif;
@@ -121,5 +140,14 @@
     color: white;
     border: 1px solid white;
     letter-spacing: 4px;
+    transition: all 0.1s ease-in-out;
   }
+
+  .About__button:hover {
+    background-color: white;
+    border: none;
+    color: black;
+    cursor: pointer;
+  }
+
   

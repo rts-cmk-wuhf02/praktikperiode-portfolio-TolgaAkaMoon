@@ -13,6 +13,9 @@ let checbox = document.querySelector("#checkbox");
 // Give class active when you click on the Burger Menu
 navBarToggle.addEventListener("click", function() {
   mainNav.classList.toggle('active');
+  if (mainNav.classList = active) {
+
+  }
 });
 
 
