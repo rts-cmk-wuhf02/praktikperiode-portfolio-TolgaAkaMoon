@@ -27,21 +27,24 @@ let i;
 let jamstackDesc = document.querySelector(".main__jamDesc");
 let jamstackDrop = document.querySelector(".dropdown-container");
 let jamstackTitle = document.querySelector(".jamstack__heading1");
-let JamstackText = [{
-  JavaScript: 'Jeg har arbejdet med JavaScript i over 2 år nu, og jeg har lært en masse omkring DOM Manupulation.'
-},
-{
-  API: 'Spotify har et API som jeg har arbejdet med, man skal dov have premium som er noget lort.'
-},
-{
-  HTML: 'Jeg har arbejdet med HTML i et stykek tid, blah blah blah, jeg er super god til at kode og så videre, html html blah flere år endu'
-}]
+let JamstackText = {
+JavaScript: 'Jeg har arbejdet med JavaScript i over 2 år nu, og jeg har lært en masse omkring DOM Manupulation.',
+API: 'Spotify har et API som jeg har arbejdet med, man skal dov have premium som er noget lort.',
+HTML: 'Jeg har arbejdet med HTML i et stykek tid, blah blah blah, jeg er super god til at kode og så videre, html html blah flere år endu'
+}
 
+jamstackDrop.addEventListener("click", function(e) {
+  if (e.target.localName == "a") {
+    jamstackTitle.innerHTML = e.target.innerHTML;
+    let evoTarget = e.target.innerHTML;
+    jamstackDesc.innerHTML = JamstackText;
+    console.log(evoTarget)
+  }
+  else {
 
+  }
 
-jamstackDesc.innerHTML = JamstackText[0].JavaScript
-console.log(JamstackText[0].JavaScript)
-
+});
 
 for (i = 0; i < dropdown.length; i++) {
   dropdown[i].addEventListener("click", function() {
