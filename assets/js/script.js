@@ -37,13 +37,12 @@ jamstackDrop.addEventListener("click", function(e) {
   if (e.target.localName == "a") {
     jamstackTitle.innerHTML = e.target.innerHTML;
     let evoTarget = e.target.innerHTML;
-    jamstackDesc.innerHTML = JamstackText;
-    console.log(evoTarget)
+    let pathJs = `JamstackText.${e.target.innerHTML}`;
+    jamstackDesc.innerHTML = eval(pathJs);
   }
   else {
 
   }
-
 });
 
 for (i = 0; i < dropdown.length; i++) {
