@@ -2,6 +2,7 @@
     width: 100vw;
     position: absolute;
     z-index: 15;
+    position: fixed;
 }
 
 .header__portfolio{
@@ -18,7 +19,6 @@
 }
 
 .header__nav {
-    position: sticky;
 }
 
 nav {

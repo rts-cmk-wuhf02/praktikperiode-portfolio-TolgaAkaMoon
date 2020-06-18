@@ -2,6 +2,23 @@ let mainNav = document.getElementById('uList');
 let navBarToggle = document.querySelector("#checkboxLabel");
 let checbox = document.querySelector("#checkbox");
 
+mainNav.children[0].addEventListener("click", function() {
+  document.querySelector('.dropdown-btn').scrollIntoView({ 
+    behavior: 'smooth'});
+})
+mainNav.children[1].addEventListener("click", function() {
+  document.querySelector('.Frame__button').scrollIntoView({ 
+    behavior: 'smooth'});
+})
+mainNav.children[2].addEventListener("click", function() {
+  document.querySelector('.Work__button').scrollIntoView({ 
+    behavior: 'smooth'});
+})
+mainNav.children[3].addEventListener("click", function() {
+  document.querySelector('.About__button').scrollIntoView({ 
+    behavior: 'smooth'});
+})
+
 // Checkbox unchecked when site width is over 767px
 setInterval(() => {
   var mq = window.matchMedia( "(max-width: 767px)" );
@@ -15,7 +32,7 @@ navBarToggle.addEventListener("click", function() {
   navBarToggle.style.transform = "scale(1.2)";
   setTimeout(function(){
     navBarToggle.style.transform = "scale(1)";
-  },200)
+  }, 100)
 });
 
 // Give class active when you click on the Burger Menu
