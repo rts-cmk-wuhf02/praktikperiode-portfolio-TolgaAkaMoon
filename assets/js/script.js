@@ -3,11 +3,13 @@ let navBarToggle = document.querySelector("#checkboxLabel");
 let checbox = document.querySelector("#checkbox");
 
 // Checkbox unchecked when site width is over 767px
-var mq = window.matchMedia( "(max-width: 767px)" );
-if (mq.matches) {}
-else {
-  checbox.checked = false
-}
+setInterval(() => {
+  var mq = window.matchMedia( "(max-width: 767px)" );
+  if (mq.matches) {}
+  else {
+    checbox.checked = false
+  }
+}, 1000);
 
 navBarToggle.addEventListener("click", function() {
   navBarToggle.style.transform = "scale(1.2)";

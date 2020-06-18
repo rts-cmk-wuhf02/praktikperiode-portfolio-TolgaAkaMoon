@@ -99,8 +99,10 @@ ul li a {
     width: 50px;
     background-size: cover;
     border: none;
-
 }
+
+:focus {outline:none;}
+:-moz-focus-inner {border:0;}
 
 @media only screen and (min-width: 768px) {
 
