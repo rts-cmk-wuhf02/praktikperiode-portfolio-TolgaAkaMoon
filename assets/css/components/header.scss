@@ -88,8 +88,10 @@ ul li a {
 }
 
 #checkboxLabel {
+    transition: all 0.1s ease-in-out;
     content: url(../images/bmenu.svg);
     fill: white;
+    outline: none;
     position: relative;
     display: inline-block;
     grid-column: 2;
@@ -97,6 +99,7 @@ ul li a {
     width: 50px;
     background-size: cover;
     border: none;
+
 }
 
 @media only screen and (min-width: 768px) {

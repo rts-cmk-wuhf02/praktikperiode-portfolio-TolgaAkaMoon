@@ -2,15 +2,19 @@ let mainNav = document.getElementById('uList');
 let navBarToggle = document.querySelector("#checkboxLabel");
 let checbox = document.querySelector("#checkbox");
 
-
-
-
 // Checkbox unchecked when site width is over 767px
 var mq = window.matchMedia( "(max-width: 767px)" );
 if (mq.matches) {}
 else {
   checbox.checked = false
 }
+
+navBarToggle.addEventListener("click", function() {
+  navBarToggle.style.transform = "scale(1.2)";
+  setTimeout(function(){
+    navBarToggle.style.transform = "scale(1)";
+  },200)
+});
 
 // Give class active when you click on the Burger Menu
 navBarToggle.addEventListener("click", function() {
