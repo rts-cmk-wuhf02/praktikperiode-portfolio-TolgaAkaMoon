@@ -33,8 +33,18 @@ nav {
     height: 50px;
 }
 
+@keyframes leftToRight {
+    from {transform: translateX(0vw)}
+    to {transform: translateX(100vw)}
+}
+
+#navLeftToRight {
+    animation: leftToRight 0.6s ease;
+    display: grid;
+}
+
 nav ul {
-	display: none;
+    display: none;
     position: relative;
 	grid-template-rows: repeat(4, 1fr);
 	height: 300px;
@@ -66,10 +76,6 @@ ul li a {
     display: none;
 }
 
-@keyframes leftToRight {
-    from {transform: translateX(0vw)}
-    to {transform: translateX(100vw)}
-}
 
 #checkbox:checked + #uList {
     transition: all 0.1s ease-in-out;
@@ -78,7 +84,7 @@ ul li a {
         from {transform: translateX(100vw)}
         to {transform: translateX(0vw)}
     }
-    animation: rightToLeft 0.7s ease;
+    animation: rightToLeft 0.6s ease;
 }
 
 #checkboxLabel {

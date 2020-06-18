@@ -15,8 +15,14 @@ else {
 // Give class active when you click on the Burger Menu
 navBarToggle.addEventListener("click", function() {
   mainNav.classList.toggle('active');
-  if (mainNav.classList = active) {
-    
+  if (mainNav.classList == "") {
+    mainNav.id = "navLeftToRight";
+    setTimeout(function(){
+      mainNav.id = "uList";
+    }, 500);
+  }
+  else {
+    mainNav.id = "uList";
   }
 });
 
