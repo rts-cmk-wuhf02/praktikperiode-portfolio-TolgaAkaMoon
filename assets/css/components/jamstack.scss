@@ -182,3 +182,22 @@
     margin-left: 45.5%;
     margin-right: 50%;
   }
+
+  .jamDesc__iframe {
+    width: 400px;
+    border: none;
+    height: 500px;
+    margin-bottom: 40px;
+  }
+
+  .jamDesc__iframe::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  .jamDesc__iframe::-webkit-scrollbar-track {
+    background: white;
+  }
+
+  .jamDesc__iframe::-webkit-scrollbar-thumb {
+    background: black;
+  }
