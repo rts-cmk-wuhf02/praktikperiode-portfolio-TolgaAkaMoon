@@ -179,12 +179,13 @@
     margin: 0;
     padding: 0;
     display: block;
-    margin-left: 45.5%;
+    margin-left: 44%;
     margin-right: 50%;
   }
 
   .jamDesc__iframe {
-    width: 400px;
+    width: 90%;
+    min-width: 320px;
     border: none;
     height: 500px;
     margin-bottom: 40px;
