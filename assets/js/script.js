@@ -2,6 +2,12 @@ let mainNav = document.getElementById('uList');
 let navBarToggle = document.querySelector("#checkboxLabel");
 let checbox = document.querySelector("#checkbox");
 
+window.addEventListener('scroll', function(e){
+  if (window.scrollY >= 50) {
+    document.querySelector(".header").style.position = "fixed";
+  }
+});
+
 mainNav.children[0].addEventListener("click", function() {
   document.querySelector('.dropdown-btn').scrollIntoView({ 
     behavior: 'smooth'});
