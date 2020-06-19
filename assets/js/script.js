@@ -3,8 +3,11 @@ let navBarToggle = document.querySelector("#checkboxLabel");
 let checbox = document.querySelector("#checkbox");
 
 window.addEventListener('scroll', function(e){
-  if (window.scrollY >= 50) {
-    document.querySelector(".header").style.position = "fixed";
+  if (window.scrollY >= 100) {
+    document.querySelector("nav").style.backgroundColor = "#14161b";
+  }
+  else {
+    document.querySelector("nav").style.backgroundColor = "#0f1014";
   }
 });
 
