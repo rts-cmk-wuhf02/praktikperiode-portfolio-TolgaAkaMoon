@@ -66,11 +66,98 @@ let jamstackDesc = document.querySelector(".main__jamDesc");
 let jamstackDrop = document.querySelector(".dropdown-container");
 let jamstackTitle = document.querySelector(".jamstack__heading1");
 let JamstackText = {
-JavaScript: 'Jeg har arbejdet med JavaScript i over 2 år nu, og jeg har lært en masse omkring DOM Manupulation.',
-API: 'Spotify har et API som jeg har arbejdet med, man skal dov have premium som er noget lort.',
-HTML: 'Jeg har arbejdet med HTML i et stykek tid, blah blah blah, jeg er super god til at kode og så videre, html html blah flere år endu'
-}
+IMUSICPLAYER: `IMusicPlayer er et projekt jeg havde en uge til, jeg skulle lave alt fra bunden. Jeg skulle bruge Spotify's API, som er et meget godt api, men kræver premium abonoment.`,
+JAVASCRIPT: `Jeg har arbejdet med JavaScript i over 2 år nu, og jeg har lært en masse omkring DOM Manupulation. 
+Her er lidt af JavaScript koden til min Player
+<code class="trash__code">
 
+document.addEventListener("DOMContentLoaded", () => {<br>
+  <br>
+    let Base64 = "basic ZjFlYmQ5YmRjMTVlNDhlMGIxYmNmZjhiNmY0NmNjZjA6ZTFmZjNkNDhjMDRiNGIzNGFjYzZkMmYyMGQxYmNjMDY=";<br>
+    let scope = "user-read-email user-read-private user-read-playback-state user-modify-playback-state user-read-currently-playing streaming"<br>
+  <br>
+    fetch('https://accounts.spotify.com/api/token', {<br>
+        method: 'post',<br>
+        headers: {<br>
+            'Authorization': Base64,<br>
+            'Content-Type': 'application/x-www-form-urlencoded'<br>
+        }<br>
+    })<br>
+    .then(res => res.json())<br>
+    .then(json => {<br>
+      <br>
+        console.log(json)<br>
+        <br>
+        let accessToken = "Bearer "+ json.access_token;<br>
+        <br>
+        fetch('https://api.spotify.com/v1/me/player', {<br>
+            method: 'get',<br>
+            headers: {<br>
+                'Authorization': accessToken,<br>
+            }<br>
+        })<br>
+        .then(res => res.json())<br>
+        .then(tracks => { <br>
+          <br>
+            console.log(tracks)<br>
+            <br>
+            let accessToken = "Bearer "+ json.access_token;<br>
+            <br>
+            fetch('https://api.spotify.com/v1/me/player/play', {<br>
+                method: 'put',<br>
+                body: {<br>
+                    "uris": [<br>
+                        "spotify:track:4iV5W9uYEdYUVa79Axb7Rh",<br>
+                        "spotify:track:1301WleyT98MSxVHPZCA6M"<br>
+                    ],<br>
+                    "offset": {"position": 5},<br>
+                    "position_ms": 0<br>
+                },<br>
+                headers: {<br>
+                    'Authorization': accessToken,<br>
+                }<br>
+            })<br>
+            .then(res => res.json())<br>
+            .then(tracks => {<br>
+                console.log(tracks)<br>
+            });<br>
+        });<br>
+    });<br>
+  });<br>
+
+</code>
+`,
+API: `Spotify har et API som jeg har arbejdet lidt med, nedenunder er javascript koden til hvordan jeg for fat i spotify's api.
+
+<code class="trash__code">
+
+  fetch('https://accounts.spotify.com/api/token', {<br>
+      method: 'post',<br>
+      headers: {<br>
+          'Authorization': Base64,<br>
+          'Content-Type': 'application/x-www-form-urlencoded'<br>
+      }<br>
+  })<br>
+  .then(res => res.json())<br>
+  .then(json => {<br>
+    <br>
+      console.log(json)<br>
+
+</code>`,
+HTML: `
+HTML var ikke sår svært, jeg følgte bare en meget klassisk structur:
+<br>
+Div <br>
+A<br>
+Img<br>
+H2<br>
+H5<br>
+Img<br>
+/a<br>
+/div
+`
+}
+  
 jamstackDrop.addEventListener("click", function(e) {
   if (e.target.localName == "a") {
     jamstackTitle.innerHTML = e.target.innerHTML;

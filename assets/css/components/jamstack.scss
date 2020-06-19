@@ -162,8 +162,8 @@
     cursor: pointer;
     width: 50%;
     text-align: center;
-    margin-top: 12px;
-    margin-bottom: 12px;
+    margin-top: 5px;
+    margin-bottom: 5px;
     font-size: 1em;
   }
 
@@ -204,4 +204,34 @@
 
   .jamDesc__iframe::-webkit-scrollbar-thumb {
     background: black;
+  }
+
+  .links__to__site {
+    color: white;
+    margin-bottom: -15px;
+  }
+
+  .links__to__site:hover {
+    color: whitesmoke;
+    content: "hello";
+  }
+
+  .wierd__div{
+    display: flex;
+    justify-content: space-evenly;
+    width: 300px;
+  }
+
+  .trash__code {
+    text-align: left;
+    background-color: #14161b;
+    width: 60vw;
+    min-width: 230px;
+    max-width: 560px;
+    display: inline-block;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    word-break: break-all; 
   }
