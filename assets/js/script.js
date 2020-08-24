@@ -2,6 +2,17 @@ let mainNav = document.getElementById('uList');
 let navBarToggle = document.querySelector("#checkboxLabel");
 let checbox = document.querySelector("#checkbox");
 
+if('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('../../sw.js').then(function(registration) {
+      console.log('ServiceWorker registration was successful with scope: ', registration.scope);
+    }, function (err) {
+      console.log('ServiceWorker registration failed: ', err);
+    })
+  })
+}
+
+
 window.addEventListener('scroll', function(e){
   if (window.scrollY >= 100) {
     document.querySelector("nav").style.backgroundColor = "#14161b";
@@ -12,7 +23,7 @@ window.addEventListener('scroll', function(e){
 });
 
 mainNav.children[0].addEventListener("click", function() {
-  document.querySelector('.dropdown-btn').scrollIntoView({ 
+  document.querySelector('.jamstack__div').scrollIntoView({ 
     behavior: 'smooth'});
 })
 mainNav.children[1].addEventListener("click", function() {

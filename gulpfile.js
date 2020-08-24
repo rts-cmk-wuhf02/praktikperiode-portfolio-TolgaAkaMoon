@@ -50,6 +50,29 @@ function watchJs(done) {
     gulp.watch('./assets/js/*.js', { ignoreInitial: false }, js);
 }
 
+function manifest(done){
+    gulp.src('./manifest.webmanifest')
+    .pipe(gulp.dest('./dist/'))
+    .pipe(connect.reload());
+    done();
+}
+
+function watchManifest(done) {
+    gulp.watch('./manifest.webmanifest', { ignoreInitial: false }, manifest);
+}
+
+function serviceWorker(done){
+    gulp.src('./sw.js')
+    .pipe(gulp.dest('./dist/'))
+    .pipe(connect.reload());
+    done();
+}
+
+function watchServiceworker(done) {
+    gulp.watch('./sw.js', { ignoreInitial: false }, serviceWorker);
+}
+
+
 function images(done) {
 	gulp.src("./assets/images/*")
 		.pipe(imagemin())
@@ -63,6 +86,8 @@ function watchImages(done) {
 }
 
 gulp.task('dev', function(done){
+    watchServiceworker();
+    watchManifest();
     watchHtml();
     watchScss();
     watchJs();
@@ -75,6 +100,8 @@ gulp.task('dev', function(done){
 });
 
 gulp.task('build', function(done) {
+    serviceWorker(done);
+    manifest(done);
     html(done);
     scss(done);
     js(done);
