@@ -2,7 +2,11 @@ let cacheName = "static-cache-v1";
 
 let filesToCache = [
     '/',
-    '/index.html'
+    '/index.html',
+    '/assets/images/marioios.png',
+    '/assets/images/mario.png',
+    '/assets/css/style.css',
+    '/assets/javascript/script.js'
 ]
 
 self.addEventListener('install', function(event) {
