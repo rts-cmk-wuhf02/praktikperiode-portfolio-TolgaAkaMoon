@@ -36,7 +36,17 @@ Notification.requestPermission(function(status){
   if (Notification.permission == 'granted') {
     navigator.serviceWorker.getRegistration().then(function(reg) {
       reg.showNotification("Velkommen til mit Portfolio")
-    })
+      var options = {
+        body: 'Here is a notification body!',
+        icon: 'assets/images/marios.png',
+        vibrate: [100, 50, 100],
+        data: {
+          dateOfArrival: Date.now(),
+          primaryKey: 1
+        }
+      };
+      reg.showNotification('Hello world!', options);
+    });
   }
 })
 
