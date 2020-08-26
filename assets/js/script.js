@@ -31,6 +31,15 @@ if('serviceWorker' in navigator) {
   });
 }
 
+Notification.requestPermission(function(status){
+  console.log('Notification permission status:', status)
+  if (Notification.permission == 'granted') {
+    navigator.serviceWorker.getRegistration().then(function(reg) {
+      reg.showNotification("Velkommen til mit Portfolio")
+    })
+  }
+})
+
 
 window.addEventListener('scroll', function(e){
   if (window.scrollY >= 100) {
