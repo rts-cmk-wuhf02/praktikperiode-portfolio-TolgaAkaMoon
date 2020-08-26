@@ -24,6 +24,7 @@
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2",
     "node-sass": "^4.13.0",
+    "pwacompat": "^2.0.16",
     "tailwindcss": "^1.4.6"
   }
 }
