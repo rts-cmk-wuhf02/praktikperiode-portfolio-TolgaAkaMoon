@@ -2,6 +2,8 @@ let cacheName = "static-cache-v1";
 let filesToCache = [
     '/',
     '/index.html',
+    '/fallback.html',
+    '/test/index.html',
     '/assets/images/marioios.png',
     '/assets/images/mario.png',
     '/assets/css/style.css',
@@ -43,4 +45,3 @@ self.addEventListener("fetch", function (event) {
       })
     );
 });
-Collapse  

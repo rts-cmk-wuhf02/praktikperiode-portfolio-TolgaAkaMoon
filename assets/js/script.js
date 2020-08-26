@@ -10,6 +10,25 @@ if('serviceWorker' in navigator) {
       console.log('ServiceWorker registration failed: ', err);
     })
   })
+  let deferredPrompt;
+  
+  window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    deferredPrompt = e;
+    document.querySelector(".hidden").classList.toggle("hidden", false);
+  });
+
+  document.querySelector(".install__button").addEventListener('click', (e) => {
+    document.querySelector(".install__button").classList.add("hidden");
+    deferredPrompt.prompt();
+    deferredPrompt.userChoice.then((choiceResult) => {
+      if (choiceResult.outcome === 'accepted') {
+        console.log('User accepted the install prompt');
+      } else {
+        console.log('User dismissed the install prompt');
+      }
+    });
+  });
 }
 
 
