@@ -11,16 +11,20 @@ sass.compiler = require('node-sass');
 function html(done) {
     gulp.src('./assets/html/templates/*.ejs')
         .pipe(ejs())
-        .pipe(rename(function(path){
-            if(path.basename != "index") {
-                path.dirname = path.basename;
-                path.basename = "index";
-            } 
-                path.extname = ".html";
+        .pipe(rename(function (path) {
+            if (path.basename != "index") {
+                if (path.basename != "fallback") {
+                    if (path.basename != "offline") {
+                        path.dirname = path.basename;
+                        path.basename = "index";
+                    }
+                }
+            }
+            path.extname = ".html";
         }))
         .pipe(gulp.dest('./dist'))
         .pipe(connect.reload());
-        done()
+    done()
 }
 
 function watchHtml(done) {
@@ -39,10 +43,10 @@ function watchScss(done) {
     gulp.watch('./assets/css/**/*.scss', { ignoreInitial: false }, scss);
 }
 
-function js(done){
+function js(done) {
     gulp.src('./assets/js/*.js')
-    .pipe(gulp.dest('./dist/assets/javascript'))
-    .pipe(connect.reload());
+        .pipe(gulp.dest('./dist/assets/javascript'))
+        .pipe(connect.reload());
     done();
 }
 
@@ -50,10 +54,10 @@ function watchJs(done) {
     gulp.watch('./assets/js/*.js', { ignoreInitial: false }, js);
 }
 
-function manifest(done){
+function manifest(done) {
     gulp.src('./manifest.webmanifest')
-    .pipe(gulp.dest('./dist/'))
-    .pipe(connect.reload());
+        .pipe(gulp.dest('./dist/'))
+        .pipe(connect.reload());
     done();
 }
 
@@ -61,10 +65,10 @@ function watchManifest(done) {
     gulp.watch('./manifest.webmanifest', { ignoreInitial: false }, manifest);
 }
 
-function serviceWorker(done){
+function serviceWorker(done) {
     gulp.src('./sw.js')
-    .pipe(gulp.dest('./dist/'))
-    .pipe(connect.reload());
+        .pipe(gulp.dest('./dist/'))
+        .pipe(connect.reload());
     done();
 }
 
@@ -74,18 +78,18 @@ function watchServiceworker(done) {
 
 
 function images(done) {
-	gulp.src("./assets/images/*")
-		.pipe(imagemin())
-		.pipe(gulp.dest("./dist/assets/images"))
-		.pipe(connect.reload());
-	done();
+    gulp.src("./assets/images/*")
+        .pipe(imagemin())
+        .pipe(gulp.dest("./dist/assets/images"))
+        .pipe(connect.reload());
+    done();
 }
 
 function watchImages(done) {
-	gulp.watch("./assets/images/*", { ignoreInitial: false}, images);
+    gulp.watch("./assets/images/*", { ignoreInitial: false }, images);
 }
 
-gulp.task('dev', function(done){
+gulp.task('dev', function (done) {
     watchServiceworker();
     watchManifest();
     watchHtml();
@@ -99,7 +103,7 @@ gulp.task('dev', function(done){
     done();
 });
 
-gulp.task('build', function(done) {
+gulp.task('build', function (done) {
     serviceWorker(done);
     manifest(done);
     html(done);

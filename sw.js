@@ -1,5 +1,4 @@
 let cacheName = "static-cache-v1";
-
 let filesToCache = [
     '/',
     '/index.html',
@@ -23,11 +22,25 @@ self.addEventListener('activate', function(event) {
     console.log('activate', event)
 });
 
-self.addEventListener('fetch', function(event) {
-    console.log('fetch', event);
+self.addEventListener("fetch", function (event) {
+    console.log("fetch", event);
     event.respondWith(
-        caches.match(event.request).then(function(response) {
-            return response || fetch(event.request);
-        })
-    )
+      caches.open(cacheName).then(function (cache) {
+        return cache
+          .match(event.request)
+          .then(function (response) {
+            return (
+              response ||
+              fetch(event.request).then(function (response) {
+                cache.put(event.request, response.clone());
+                return response;
+              })
+            );
+          })
+          .catch(function () {
+            return caches.match("/fallback.html");
+          });
+      })
+    );
 });
+Collapse  
