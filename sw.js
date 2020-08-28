@@ -1,3 +1,29 @@
+importScripts("https://storage.googleapis.com/workbox-cdn/releases/5.1.2/workbox-sw.js");
+
+const { registerRoute } = workbox.routing;
+const { setCatchHandler } = workbox.routing;
+const { precacheAndRoute } = workbox.precaching;
+const { StaleWhileRevalidate } = workbox.strategies;
+
+precacheAndRoute([
+  { url: '/index.html', revision: null},
+  { url: '/fallback.html', revision: null},
+  { url: '/assets/images/marioios.png', revision: null},
+  { url: '/assets/images/mario.png', revision: null},
+  { url: '/assets/javascript/script.js', revision: null},
+  { url: '/assets/css/style.css', revision: null},
+])
+
+registerRoute(({ url }) => url.pathname.startsWith("/"), new StaleWhileRevalidate());
+
+setCatchHandler(({ url, event, params }) => {
+  if (event.request.destination == 'document') {
+    return caches.match('/fallback.html');
+  } else {
+    return Response.error();
+  }
+})
+
 let cacheName = "static-cache-v1";
 let filesToCache = [
     '/',
